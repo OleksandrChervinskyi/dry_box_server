@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from rest_framework.generics import ListCreateAPIView, GenericAPIView
+from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.mixins import UpdateModelMixin
 from rest_framework.permissions import AllowAny
 
@@ -14,6 +14,9 @@ class UserListCreateView(ListCreateAPIView):
     permission_classes = (AllowAny,)
     serializer_class = UserSerializer
     queryset = UserModel.objects.all()
+
+    def get_serializer_context(self):
+        return {"request": self.request}
 
 
 class UserAddAvatarView(GenericAPIView, UpdateModelMixin):

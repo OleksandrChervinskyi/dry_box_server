@@ -21,3 +21,6 @@ class UserManager(BaseUserManager):
         if extra_kwargs.get('is_superuser') is not True:
             raise ValueError('Superuser must have is_superuser=True')
         return self.create_user(email, password, **extra_kwargs)
+
+    def activate(self):
+        self.update(is_active=True)
