@@ -3,7 +3,7 @@ from datetime import timedelta
 from rest_framework_simplejwt.token_blacklist.models import OutstandingToken
 from rest_framework_simplejwt.tokens import AccessToken, BlacklistMixin
 
-from exeptions.jwt_exeption import JwtException
+from backend.exeptions.jwt_exeption import JwtException
 
 
 class _AccessToken(BlacklistMixin, AccessToken):
