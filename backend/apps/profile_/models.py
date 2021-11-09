@@ -1,7 +1,7 @@
 from django.db import models
 
 from django.contrib.auth import get_user_model
-from backend.utils.file_utils import FileUtils
+from utils.file_utils import FileUtils
 
 UserModel = get_user_model()
 

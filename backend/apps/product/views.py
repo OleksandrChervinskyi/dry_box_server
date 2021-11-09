@@ -3,9 +3,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-from backend.apps.product.models import ProductModel
-from backend.apps.product.serializers import ProductSerializers
-from backend.paginations.my_pagination import MyPagination
+from apps.product.models import ProductModel
+from apps.product.serializers import ProductSerializers
+from paginations.my_pagination import MyPagination
 
 
 @method_decorator(name='get', decorator=swagger_auto_schema(operation_id='Список товарів'))

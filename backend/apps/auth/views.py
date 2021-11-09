@@ -4,8 +4,8 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from backend.apps.user.models import CustomUser
-from backend.utils.jwt_utils import JwtUtils
+from apps.user.models import CustomUser
+from utils.jwt_utils import JwtUtils
 
 UserModel: CustomUser = get_user_model()
 

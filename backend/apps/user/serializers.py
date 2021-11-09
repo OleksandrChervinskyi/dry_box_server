@@ -3,10 +3,10 @@ from django.urls import reverse
 
 from rest_framework import serializers as s
 
-from backend.apps.profile_.models import ProfileModel
-from backend.apps.profile_.serializers import ProfileSerializer
-from backend.utils.email_utils import MailUtils
-from backend.utils.jwt_utils import JwtUtils
+from apps.profile_.models import ProfileModel
+from apps.profile_.serializers import ProfileSerializer
+from utils.email_utils import MailUtils
+from utils.jwt_utils import JwtUtils
 
 from .models import CustomUser
 

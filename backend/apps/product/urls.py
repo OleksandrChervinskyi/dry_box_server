@@ -1,6 +1,6 @@
 from django.urls import path
 
-from backend.apps.product.views import ProductListCreateView, ProductRetrieveUpdateDestroyView
+from apps.product.views import ProductListCreateView, ProductRetrieveUpdateDestroyView
 
 urlpatterns = [
     path('', ProductListCreateView.as_view(), name='product_list_create'),

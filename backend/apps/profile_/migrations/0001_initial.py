@@ -4,9 +4,10 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 
+import utils
+
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -21,8 +22,9 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=20)),
                 ('surname', models.CharField(max_length=20)),
                 ('born', models.DateField()),
-                ('avatar', models.ImageField(blank=True, upload_to=backend.utils.file_utils.FileUtils.avatar_upload_to)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='profile', to=settings.AUTH_USER_MODEL)),
+                ('avatar', models.ImageField(blank=True, upload_to=utils.file_utils.FileUtils.avatar_upload_to)),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='profile',
+                                              to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'db_table': 'profile',

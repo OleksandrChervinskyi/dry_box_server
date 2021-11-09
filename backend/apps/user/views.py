@@ -5,7 +5,7 @@ from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.mixins import UpdateModelMixin
 from rest_framework.permissions import AllowAny
 
-from backend.apps.profile_.serializers import ProfileAvatarSerializer
+from apps.profile_.serializers import ProfileAvatarSerializer
 from .models import CustomUser
 from .serializers import UserSerializer
 
